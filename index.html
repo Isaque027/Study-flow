@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Study flow</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/main.js" type="module"></script>
+    <script src="js/api.js" type="module"></script>
+    <script src="js/ui.js" type="module"></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Study flow</h1>
+        <p>Construa seu caminho de aprendizado passo a passo</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Controles -->
+        <section class="controls">
+            <input
+                type="text"
+                placeholder="Buscar trilha..."
+                class="search-input"
+            >
+
+            <select class="filter-select">
+                <option value="">Todos os níveis</option>
+                <option>Iniciante</option>
+                <option>Intermediário</option>
+                <option>Avançado</option>
+            </select>
+
+            <button class="btn-primary">+ Nova Trilha</button>
+        </section>
+
+        <!-- Trilha / Timeline -->
+        <section class="timeline">
+
+            
+
+        </section>
+
+        <!-- Formulário -->
+        <section class="form-section">
+            <h2>Cadastrar / Editar Trilha</h2>
+
+            <form class="form-trilha">
+                <label>
+                    Nome da Trilha
+                    <input type="text">
+                </label>
+
+                <label>
+                    Descrição
+                    <textarea></textarea>
+                </label>
+
+                <label>
+                    Nível
+                    <select>
+                        <option>Iniciante</option>
+                        <option>Intermediário</option>
+                        <option>Avançado</option>
+                    </select>
+                </label>
+
+                <label>
+                    Status
+                    <select>
+                        <option>Planejado</option>
+                        <option>Em andamento</option>
+                        <option>Concluído</option>
+                    </select>
+                </label>
+
+                <div class="form-actions">
+                    <button class="btn-primary">Salvar</button>
+                    <button class="btn-cancel" type="button">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Projeto Front-end II — Study flow</p>
+    </footer>
+
+</body>
+</html>
