@@ -9,7 +9,6 @@ const api = {
         } catch(error){
             alert('Erro ao buscar as trilhas!')
         }
-
     },
 
     async cadastrarNaTrilha(conteudo){
@@ -17,12 +16,45 @@ const api = {
             const response = await fetch(`${URL_BASE}/trilhas`, {
                 method : "POST",
                 headers : {
-                    "Content-Type" : "application.json"
+                    "Content-Type" : "application/json"
                 },
                 body : JSON.stringify(conteudo)
             })
         } catch(error){
             alert('Erro ao cadastrar conteúdo na trilha!')
+        }
+    },
+
+    async alterarConteudoTrilha(conteudo){
+        try{
+            const response = await fetch(`${URL_BASE}/trilhas/${conteudo.id}`, {
+                method : "PUT",
+                headers : {
+                    "Content-Type" : "application/json"
+                },
+                body : JSON.stringify(conteudo)
+            })
+        }catch(error){
+            alert("Erro ao alterar conteúdo da trilha!")
+        }
+    },
+
+    async buscarTrilhasPorId(id){
+        try{
+            const response = await fetch(`${URL_BASE}/trilhas/${id}`)
+            return response.json()
+        }catch(error){
+            alert('Erro ao buscar conteúdo na trilha por id!')
+        } 
+    },
+
+    async deletarConteudoTrilha(id){
+        try{
+            const response = await fetch(`${URL_BASE}/trilhas/${id}`, {
+                method : "DELETE"
+            })
+        }catch(error){
+            alert('Erro ao deletar conteúdo da trilha!')
         }
     }
 

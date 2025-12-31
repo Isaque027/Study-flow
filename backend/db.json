@@ -1,7 +1,7 @@
 {
   "trilhas": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Front-end Básico",
       "descricao": "HTML, CSS e fundamentos de JavaScript",
       "nivel": "Iniciante",
@@ -9,20 +9,18 @@
       "ordem": 1
     },
     {
-      "id": 2,
-      "titulo": "JavaScript Intermediário",
-      "descricao": "DOM, eventos, fetch e lógica de programação",
-      "nivel": "Intermediário",
-      "status": "Planejado",
-      "ordem": 2
+      "id": "2",
+      "titulo": "JavaScript  Intermediário",
+      "descricao": "Fundamentos de JavaScript, DOM, JavaScript Assíncrono, Requisições HTTP, Versionamento.",
+      "nivel": "Iniciante",
+      "status": "Em andamento"
     },
     {
-      "id": 3,
+      "id": "3",
       "titulo": "Frameworks Front-end",
       "descricao": "Introdução a frameworks modernos",
       "nivel": "Avançado",
-      "status": "Concluído",
-      "ordem": 3
+      "status": "Concluído"
     }
   ]
-}
+} 

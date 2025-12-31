@@ -37,9 +37,7 @@
 
         <!-- Trilha / Timeline -->
         <section class="timeline">
-
             
-
         </section>
 
         <!-- Formulário -->
@@ -47,19 +45,20 @@
             <h2>Cadastrar / Editar Trilha</h2>
 
             <form class="form-trilha">
+                <input type="hidden" id="trilha-id" />
                 <label>
                     Nome da Trilha
-                    <input type="text">
+                    <input id="conteudo-nome" type="text">
                 </label>
 
                 <label>
                     Descrição
-                    <textarea></textarea>
+                    <textarea id="conteudo-descricao"></textarea>
                 </label>
 
                 <label>
                     Nível
-                    <select>
+                    <select id="conteudo-nivel">
                         <option>Iniciante</option>
                         <option>Intermediário</option>
                         <option>Avançado</option>
@@ -68,7 +67,7 @@
 
                 <label>
                     Status
-                    <select>
+                    <select id="conteudo-status">
                         <option>Planejado</option>
                         <option>Em andamento</option>
                         <option>Concluído</option>
