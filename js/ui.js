@@ -1,12 +1,23 @@
 import api from "./api.js";
 
+const timeLine = document.querySelector('.timeline')
+
 const ui = {
 
-    async renderizarTrilha() {
-        const trilhas = await api.buscarTrilhas()
-        if (!trilhas) return
+    async renderizarTrilha(conteudosFiltrados = null) {
 
-        trilhas.forEach(this.criarItemTrilha)
+        try {
+            let trilha
+            if(conteudosFiltrados){
+                trilha = conteudosFiltrados
+            }else{
+                trilha = await api.buscarTrilhas()
+            }
+            timeLine.innerHTML = ""
+            trilha.forEach(this.criarItemTrilha)
+        } catch (error) {
+            alert(error)
+        }
     },
 
     criarItemTrilha(trilha) {

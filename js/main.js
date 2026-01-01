@@ -2,6 +2,13 @@ import ui from "./ui.js";
 import api from "./api.js";
 
 const formulario = document.querySelector('.form-trilha')
+const inputBusca =  document.querySelector('.search-input')
+
+inputBusca.addEventListener('input', async () => {
+    const termos = inputBusca.value
+    const trilhaFiltrada = await api.filtrarPorTermo(termos)
+    await ui.renderizarTrilha(trilhaFiltrada)
+})
 
 ui.renderizarTrilha()
 

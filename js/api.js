@@ -56,6 +56,19 @@ const api = {
         }catch(error){
             alert('Erro ao deletar conteúdo da trilha!')
         }
+    },
+
+    async filtrarPorTermo(termos){
+        try{
+            const trilha = await this.buscarTrilhas()
+            const termosMaiusculo = termos.toUpperCase()
+            const trilhaFiltrada = trilha.filter( c => {
+                return ((c.titulo.toUpperCase().includes(termosMaiusculo)) || (c.descricao.toUpperCase().includes(termosMaiusculo)))
+            })
+            return trilhaFiltrada
+        }catch(error){
+
+        }
     }
 
 }
